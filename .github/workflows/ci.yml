@@ -26,6 +26,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Validate Python code
+      - name: Run tests
         run: |
-          python -m py_compile app.py
+          pytest
