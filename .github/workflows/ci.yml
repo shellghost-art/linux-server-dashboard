@@ -33,7 +33,8 @@ jobs:
       - name: Build Docker image
         run: |
           docker build -t linux-server-dashboard .
-       - name: Deploy container (CD simulation)
+
+      - name: Deploy container (CD simulation)
         run: |
           docker run -d -p 5000:5000 --name dashboard linux-server-dashboard
           sleep 5
